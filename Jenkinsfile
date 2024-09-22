@@ -1,5 +1,5 @@
 pipeline {
-	agent 'slave1/docker/kubernetes/any'
+	agent 'any'
 	stages {
 		stage("working with variables") {
 			steps {
