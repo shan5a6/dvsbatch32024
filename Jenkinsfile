@@ -1,12 +1,14 @@
 pipeline {
-	agent 'any'
+	agent 'slave1/docker/kubernetes/any'
 	stages {
-		stage("welcome to jenkins") {
+		stage("working with variables") {
 			steps {
 				script {
-						println "welcome to jenkins pipeline as a code"
+						var1=20
+						println "my var1 value is ${var1}"
 				}
 			}
 		}
 	}
+	
 }
