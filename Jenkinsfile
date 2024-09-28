@@ -13,6 +13,10 @@ pipeline {
             println "j value is ${j}"
             j = j + 1 
           }
+          for (l in [10,20,30,40,50]) {
+            print(l)
+          }
+          
         }
       }
     }
