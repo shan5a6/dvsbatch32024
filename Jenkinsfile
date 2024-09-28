@@ -7,7 +7,9 @@ pipeline {
           File file = new File("/tmp/mydata.txt")
           def lines = file.readLines()
           println "Lines\n ${lines}"
-          
+          for(line in ${lines}){
+            println "${line}"
+          }
         }
       }
     }
