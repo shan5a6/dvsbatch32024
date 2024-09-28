@@ -14,7 +14,7 @@ pipeline {
       steps {
         script {
           myfn() // Calling myfn 
-          myoperation()
+          println myoperation()
           println myoperation(20,30)
         }
       }
