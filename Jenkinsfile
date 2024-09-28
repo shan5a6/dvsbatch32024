@@ -5,9 +5,9 @@ pipeline {
       steps {
         script {
           File file = new File("/tmp/mydata.txt")
-          def lines = file.readLines()
-          println "Lines\n ${lines}"
-          for(line in ${lines}){
+          def file_content = file.readLines()
+          println "Lines\n ${file_content}"
+          for(line in file_content){
             println "${line}"
           }
         }
