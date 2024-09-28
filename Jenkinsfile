@@ -1,21 +1,13 @@
-def myfn() {
-  println "welcome to jenkins functions"
-}
-
-def myoperation(a=500,b=50) {
-  sum = a + b
-  return(sum)
-}
-
 pipeline {
   agent any 
   stages {
-    stage('Working with functions') {
+    stage('Working with fileoperations') {
       steps {
         script {
-          myfn() // Calling myfn 
-          println myoperation()
-          println myoperation(20,30)
+          File file = new File("/tmp/mydata.txt")
+          def lines = file.readLines()
+          println "Lines\n ${lines}"
+          
         }
       }
     }
